@@ -111,10 +111,10 @@ public class practice {
 #### As inspect wont work, we use the following :
 <br>
 
-`Windows + Shift + I : Inspect`
+`Cntrl + Shift + I : Inspect`
 <br>
 
-`Windows + Shift + C : To Select an element`
+`Cntrl + Shift + C : To Select an element`
 
 ```java
 package microProject;
