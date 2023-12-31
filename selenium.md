@@ -118,7 +118,7 @@ public class mid1 {
 		HashMap<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("profile.set_default_content_setting.notifications", 2);
 		
-		ChromeOptions cp = new ChromeOptions(wb);
+		ChromeOptions cp = new ChromeOptions();
 		cp.setExperimentalOption("prefs", prefs);
 		
 		wb.get("https://www.axisbank.com/");
