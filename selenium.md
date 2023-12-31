@@ -111,15 +111,14 @@ public class practice {
 ```java
 public class mid1 {
 	public static void main(String[] args) throws InterruptedException {
+		HashMap<String, Object> prefs=new HashMap<String, Object>();
+		prefs.put("profile.default_content_setting_values.notifications",0);
+		ChromeOptions options=new ChromeOptions();
+		options.setExperimentalOption("prefs", prefs);
+
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\gadap\\OneDrive\\Desktop\\Externals\\chromedriver-win64\\chromedriver.exe");
 		WebDriver wb = new ChromeDriver();
 		wb.manage().window().maximize();
-		
-		HashMap<String, Object> prefs = new HashMap<String, Object>();
-		prefs.put("profile.set_default_content_setting.notifications", 2);
-		
-		ChromeOptions cp = new ChromeOptions();
-		cp.setExperimentalOption("prefs", prefs);
 		
 		wb.get("https://www.axisbank.com/");
 		Thread.sleep(2000);
