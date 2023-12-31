@@ -117,16 +117,14 @@ public class mid1 {
 		options.setExperimentalOption("prefs", prefs);
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\gadap\\OneDrive\\Desktop\\Externals\\chromedriver-win64\\chromedriver.exe");
-		WebDriver wb = new ChromeDriver();
-		wb.manage().window().maximize();
-		
-		wb.get("https://www.axisbank.com/");
-		Thread.sleep(2000);
-		
-		WebElement we = wb.findElement(By.xpath("/html/body/div[1]/div[1]/div/span"));
-		we.click();
+		WebDriver driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
 
-//		WebElement we2 = wb.findElement(By.id("nvpush_cross"));
+		driver.get("https://www.axisbank.com/");
+		WebElement pop=driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/span"));
+		pop.click();
+
+//		WebElement we2 = driver.findElement(By.id("nvpush_cross"));
 //		we2.click();
 	}
 }
